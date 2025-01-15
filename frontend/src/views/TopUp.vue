@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-black text-white min-h-screen">
+  <div class="relative bg-black text-white min-h-screen relative">
     <!-- Loading Spinner -->
     <div v-if="isPageLoading" class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
       <div class="border-t-4 border-red-600 border-solid w-16 h-16 rounded-full animate-spin"></div>
@@ -13,7 +13,7 @@
           <p class="text-gray-300">Pilih item yang ingin kamu beli untuk top-up di game {{ gameName }}.</p>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div style="width: 350px;" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <div
             v-for="item in items"
             :key="item.id"
